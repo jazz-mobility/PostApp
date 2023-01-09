@@ -9,12 +9,26 @@
 /* Begin PBXBuildFile section */
 		E18E643C2966457000563D54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E643B2966457000563D54 /* AppDelegate.swift */; };
 		E18E643E2966457000563D54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E643D2966457000563D54 /* SceneDelegate.swift */; };
-		E18E64402966457000563D54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E643F2966457000563D54 /* ViewController.swift */; };
+		E18E64402966457000563D54 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E643F2966457000563D54 /* AuthenticationViewController.swift */; };
 		E18E64452966457100563D54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E18E64442966457100563D54 /* Assets.xcassets */; };
 		E18E64482966457100563D54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18E64462966457100563D54 /* LaunchScreen.storyboard */; };
 		E18E64532966457100563D54 /* PostAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E64522966457100563D54 /* PostAppTests.swift */; };
 		E18E645D2966457100563D54 /* PostAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E645C2966457100563D54 /* PostAppUITests.swift */; };
 		E18E645F2966457100563D54 /* PostAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E645E2966457100563D54 /* PostAppUITestsLaunchTests.swift */; };
+		E18E6473296B56D900563D54 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E6472296B56D900563D54 /* AuthenticationView.swift */; };
+		E18E6476296B582800563D54 /* AuthenticationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E6475296B582800563D54 /* AuthenticationPresenter.swift */; };
+		E18E647A296B588700563D54 /* AuthenticationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E6479296B588700563D54 /* AuthenticationInteractor.swift */; };
+		E18E647E296B623000563D54 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E647D296B623000563D54 /* NetworkService.swift */; };
+		E18E6480296B627A00563D54 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E647F296B627A00563D54 /* Request.swift */; };
+		E18E6482296B671600563D54 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E6481296B671600563D54 /* NetworkError.swift */; };
+		E18E6485296B6C1800563D54 /* GetUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E6484296B6C1800563D54 /* GetUser.swift */; };
+		E18E6488296B6C4A00563D54 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E6487296B6C4A00563D54 /* User.swift */; };
+		E18E648B296B6D7C00563D54 /* AuthenticationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E648A296B6D7C00563D54 /* AuthenticationRouter.swift */; };
+		E18E648E296B6E4B00563D54 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E648D296B6E4B00563D54 /* Dependencies.swift */; };
+		E1B99DE4296CAA8000B6A133 /* AuthenticationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B99DE3296CAA8000B6A133 /* AuthenticationFactory.swift */; };
+		E1B99DE7296CADC800B6A133 /* AuthenticationPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B99DE6296CADC800B6A133 /* AuthenticationPresenterTests.swift */; };
+		E1B99DEB296CAED000B6A133 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B99DEA296CAED000B6A133 /* GeneratedMocks.swift */; };
+		E1B99DF2296CB54E00B6A133 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B99DF1296CB54E00B6A133 /* Mocks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +52,7 @@
 		E18E64382966457000563D54 /* PostApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18E643B2966457000563D54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E18E643D2966457000563D54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E18E643F2966457000563D54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E18E643F2966457000563D54 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		E18E64442966457100563D54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E18E64472966457100563D54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E18E64492966457100563D54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +61,20 @@
 		E18E64582966457100563D54 /* PostAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18E645C2966457100563D54 /* PostAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAppUITests.swift; sourceTree = "<group>"; };
 		E18E645E2966457100563D54 /* PostAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E18E6472296B56D900563D54 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		E18E6475296B582800563D54 /* AuthenticationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPresenter.swift; sourceTree = "<group>"; };
+		E18E6479296B588700563D54 /* AuthenticationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationInteractor.swift; sourceTree = "<group>"; };
+		E18E647D296B623000563D54 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E18E647F296B627A00563D54 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		E18E6481296B671600563D54 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		E18E6484296B6C1800563D54 /* GetUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUser.swift; sourceTree = "<group>"; };
+		E18E6487296B6C4A00563D54 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E18E648A296B6D7C00563D54 /* AuthenticationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRouter.swift; sourceTree = "<group>"; };
+		E18E648D296B6E4B00563D54 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		E1B99DE3296CAA8000B6A133 /* AuthenticationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFactory.swift; sourceTree = "<group>"; };
+		E1B99DE6296CADC800B6A133 /* AuthenticationPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPresenterTests.swift; sourceTree = "<group>"; };
+		E1B99DEA296CAED000B6A133 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		E1B99DF1296CB54E00B6A133 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +125,11 @@
 		E18E643A2966457000563D54 /* PostApp */ = {
 			isa = PBXGroup;
 			children = (
+				E18E648C296B6E3E00563D54 /* Dependencies */,
+				E18E647B296B621B00563D54 /* Services */,
+				E18E6470296B56B300563D54 /* Features */,
 				E18E643B2966457000563D54 /* AppDelegate.swift */,
 				E18E643D2966457000563D54 /* SceneDelegate.swift */,
-				E18E643F2966457000563D54 /* ViewController.swift */,
 				E18E64442966457100563D54 /* Assets.xcassets */,
 				E18E64462966457100563D54 /* LaunchScreen.storyboard */,
 				E18E64492966457100563D54 /* Info.plist */,
@@ -110,6 +140,8 @@
 		E18E64512966457100563D54 /* PostAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				E1B99DE9296CAE3D00B6A133 /* Generated */,
+				E1B99DE5296CAD9C00B6A133 /* Features */,
 				E18E64522966457100563D54 /* PostAppTests.swift */,
 			);
 			path = PostAppTests;
@@ -122,6 +154,128 @@
 				E18E645E2966457100563D54 /* PostAppUITestsLaunchTests.swift */,
 			);
 			path = PostAppUITests;
+			sourceTree = "<group>";
+		};
+		E18E646F296B56AB00563D54 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				E18E6489296B6D6900563D54 /* Router */,
+				E18E6486296B6C4000563D54 /* Entity */,
+				E18E6483296B6BE400563D54 /* Endpoint */,
+				E18E6477296B586A00563D54 /* Interactor */,
+				E18E6474296B581300563D54 /* Presenter */,
+				E18E6471296B56C700563D54 /* View */,
+				E1B99DE3296CAA8000B6A133 /* AuthenticationFactory.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		E18E6470296B56B300563D54 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				E18E646F296B56AB00563D54 /* Authentication */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		E18E6471296B56C700563D54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E18E643F2966457000563D54 /* AuthenticationViewController.swift */,
+				E18E6472296B56D900563D54 /* AuthenticationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E18E6474296B581300563D54 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E18E6475296B582800563D54 /* AuthenticationPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E18E6477296B586A00563D54 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E18E6479296B588700563D54 /* AuthenticationInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E18E647B296B621B00563D54 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E18E647C296B622200563D54 /* NetworkService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E18E647C296B622200563D54 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				E18E647D296B623000563D54 /* NetworkService.swift */,
+				E18E647F296B627A00563D54 /* Request.swift */,
+				E18E6481296B671600563D54 /* NetworkError.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		E18E6483296B6BE400563D54 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				E18E6484296B6C1800563D54 /* GetUser.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		E18E6486296B6C4000563D54 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E18E6487296B6C4A00563D54 /* User.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		E18E6489296B6D6900563D54 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E18E648A296B6D7C00563D54 /* AuthenticationRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E18E648C296B6E3E00563D54 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				E18E648D296B6E4B00563D54 /* Dependencies.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		E1B99DE5296CAD9C00B6A133 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				E1B99DE8296CADCD00B6A133 /* Authentication */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		E1B99DE8296CADCD00B6A133 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				E1B99DE6296CADC800B6A133 /* AuthenticationPresenterTests.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		E1B99DE9296CAE3D00B6A133 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				E1B99DEA296CAED000B6A133 /* GeneratedMocks.swift */,
+				E1B99DF1296CB54E00B6A133 /* Mocks.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +408,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E18E64402966457000563D54 /* ViewController.swift in Sources */,
+				E18E647A296B588700563D54 /* AuthenticationInteractor.swift in Sources */,
+				E1B99DE4296CAA8000B6A133 /* AuthenticationFactory.swift in Sources */,
+				E18E64402966457000563D54 /* AuthenticationViewController.swift in Sources */,
+				E18E648B296B6D7C00563D54 /* AuthenticationRouter.swift in Sources */,
+				E18E648E296B6E4B00563D54 /* Dependencies.swift in Sources */,
+				E18E6480296B627A00563D54 /* Request.swift in Sources */,
+				E18E6485296B6C1800563D54 /* GetUser.swift in Sources */,
 				E18E643C2966457000563D54 /* AppDelegate.swift in Sources */,
+				E18E6476296B582800563D54 /* AuthenticationPresenter.swift in Sources */,
+				E18E6473296B56D900563D54 /* AuthenticationView.swift in Sources */,
+				E18E6482296B671600563D54 /* NetworkError.swift in Sources */,
 				E18E643E2966457000563D54 /* SceneDelegate.swift in Sources */,
+				E18E647E296B623000563D54 /* NetworkService.swift in Sources */,
+				E18E6488296B6C4A00563D54 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +429,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B99DE7296CADC800B6A133 /* AuthenticationPresenterTests.swift in Sources */,
 				E18E64532966457100563D54 /* PostAppTests.swift in Sources */,
+				E1B99DF2296CB54E00B6A133 /* Mocks.swift in Sources */,
+				E1B99DEB296CAED000B6A133 /* GeneratedMocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
