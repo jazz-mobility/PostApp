@@ -11,10 +11,16 @@ protocol AuthenticationFactoryInterface {
     func make(with navigationController: UINavigationController) -> AuthenticationRouting
 }
 
-final class AuthenticationFactory: AuthenticationFactoryInterface {
+final class AuthenticationFactory: AuthenticationFactoryInterface, DependencyAccessible {
+    private let postsFactory: PostsFactoryInterface
+
+    init(postFactory: PostsFactoryInterface) {
+        self.postsFactory = postFactory
+    }
+
     func make(with navigationController: UINavigationController) -> AuthenticationRouting {
-        let interactor = AuthenticationInteractor(networking: Depdendencies.networking)
-        let router = AuthenticationRouter(navigationController: navigationController)
+        let interactor = AuthenticationInteractor(networking: Self.dependencies.networking)
+        let router = AuthenticationRouter(navigationController: navigationController, postsFactory: postsFactory)
         let presenter = AuthenticationPresenter(interactor: interactor, router: router)
         let viewController = AuthenticationViewController(presenter: presenter)
         presenter.view = viewController

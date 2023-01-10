@@ -31,6 +31,7 @@ final class AuthenticationPresenter {
 extension AuthenticationPresenter: AuthenticationPresenterInterface {
     func didTapLogin(username: String) {
         interactor.login(username: username)
+            .receive(on: RunLoop.main)
             .sink { [weak self] completion in
                 switch completion {
                     case .failure(let error):

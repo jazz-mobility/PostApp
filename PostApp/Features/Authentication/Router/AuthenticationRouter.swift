@@ -19,22 +19,28 @@ protocol AuthenticationRouting: AuthenticationRoutingDelegate {
 final class AuthenticationRouter {
     var viewController: UIViewController!
     private let navigationController: UINavigationController
+    private let postsFactory: PostsFactoryInterface
 
     init(
-        navigationController: UINavigationController
+        navigationController: UINavigationController,
+        postsFactory: PostsFactoryInterface
     ) {
         self.navigationController = navigationController
+        self.postsFactory = postsFactory
     }
 }
 
 extension AuthenticationRouter: AuthenticationRouting {
     func authenticateUser() {
-        navigationController.pushViewController(viewController, animated: false)
+        navigationController
+            .pushViewController(viewController, animated: false)
     }
 }
 
 extension AuthenticationRouter: AuthenticationRoutingDelegate {
     func didFinishAuthentication(user: User) {
-
+        postsFactory
+            .make(for: user, with: navigationController)
+            .showPosts()
     }
 }

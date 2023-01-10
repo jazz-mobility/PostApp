@@ -18,7 +18,7 @@ public protocol Request {
     var path: String { get }
     var method: HTTPMethod { get }
     var contentType: String { get }
-    var queryParams: [String: String]? { get }
+    var queryParams: [String: Any]? { get }
     var body: [String: Any]? { get }
     var headers: [String: String]? { get }
 
@@ -29,7 +29,7 @@ public protocol Request {
 extension Request {
     var method: HTTPMethod { return .get }
     var contentType: String { return "application/json" }
-    var queryParams: [String: String]? { return nil }
+    var queryParams: [String: Any]? { return nil }
     var body: [String: Any]? { return nil }
     var headers: [String: String]? { return nil }
 }
@@ -48,12 +48,12 @@ extension Request {
 
         urlComponents.path = path
         if let queryItems = queryParams?
-            .map({ URLQueryItem(name: $0, value: $1) }) {
+            .map({ URLQueryItem(name: $0, value: "\($1)") }) {
             urlComponents.queryItems = queryItems
         }
 
         guard let finalURL = urlComponents.url else { throw NetworkError.invalidRequest }
-
+        debugPrint(finalURL)
         var request = URLRequest(url: finalURL)
         request.httpMethod = method.rawValue
         request.httpBody = requestBodyFrom(params: body)

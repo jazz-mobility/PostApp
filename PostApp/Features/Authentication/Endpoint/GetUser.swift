@@ -5,10 +5,8 @@
 //  Created by Jasveer Singh on 08.01.23.
 //
 
-import Foundation
-
 struct GetUser: Request {
-    typealias ReturnType = [User]
+    typealias ReturnType = Users
 
     private let username: String
 
@@ -17,7 +15,8 @@ struct GetUser: Request {
     }
 
     var path: String = "/users"
-    var queryParams: [String : String]? {
+
+    var queryParams: [String : Any]? {
         ["username": username]
     }
 }

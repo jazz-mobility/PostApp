@@ -7,10 +7,9 @@
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, DependencyAccessible {
 
     var window: UIWindow?
-
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -20,8 +19,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         let navigationController = UINavigationController()
         window?.rootViewController = navigationController
-        let router = AuthenticationFactory().make(with: navigationController)
+
+        let router = Self.dependencies
+            .authenticationFactory
+            .make(with: navigationController)
+
         router.authenticateUser()
+
         window?.makeKeyAndVisible()
     }
 

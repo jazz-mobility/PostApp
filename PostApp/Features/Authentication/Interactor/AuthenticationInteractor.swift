@@ -8,12 +8,14 @@
 import Foundation
 import Combine
 
-enum AuthenticationError: Error {
+enum AuthenticationError: Error, CustomStringConvertible {
     case userNotFound
+    case emptyUserName
 
-    var description: String? {
+    var description: String {
         switch self {
-               case .userNotFound:  return "Invalid username."
+            case .userNotFound:  return "Invalid username."
+            case .emptyUserName:  return "Please enter username."
         }
     }
 }
@@ -33,7 +35,12 @@ final class AuthenticationInteractor {
 
 extension AuthenticationInteractor: AuthenticationInteractorInterface {
     func login(username: String) -> AnyPublisher<User, AuthenticationError> {
-        networking.execute(GetUser(username: username))
+        guard username.count > 0 else {
+            return Fail<User, AuthenticationError>(error: .emptyUserName)
+                .eraseToAnyPublisher()
+        }
+
+        return networking.execute(GetUser(username: username))
             .compactMap({ users in
                 users.first
             })

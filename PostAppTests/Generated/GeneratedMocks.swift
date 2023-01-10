@@ -26,6 +26,67 @@ class AuthenticationViewInterfaceMock: AuthenticationViewInterface {
     }
 }
 
+class PostsInteractorInterfaceMock: PostsInteractorInterface {
+    init() { }
+
+
+    private(set) var fetchPostsCallCount = 0
+    var fetchPostsArgValues = [Int]()
+    var fetchPostsHandler: ((Int) -> (AnyPublisher<Posts, NetworkError>))?
+    func fetchPosts(userId: Int) -> AnyPublisher<Posts, NetworkError> {
+        fetchPostsCallCount += 1
+        fetchPostsArgValues.append(userId)
+        if let fetchPostsHandler = fetchPostsHandler {
+            return fetchPostsHandler(userId)
+        }
+        fatalError("fetchPostsHandler returns can't have a default value thus its handler must be set")
+    }
+}
+
+class PostsViewInterfaceMock: PostsViewInterface {
+    init() { }
+
+
+    private(set) var showCallCount = 0
+    var showArgValues = [String]()
+    var showHandler: ((String) -> ())?
+    func show(error: String)  {
+        showCallCount += 1
+        showArgValues.append(error)
+        if let showHandler = showHandler {
+            showHandler(error)
+        }
+        
+    }
+
+    private(set) var showPostsCallCount = 0
+    var showPostsArgValues = [Posts]()
+    var showPostsHandler: ((Posts) -> ())?
+    func show(posts: Posts)  {
+        showPostsCallCount += 1
+        showPostsArgValues.append(posts)
+        if let showPostsHandler = showPostsHandler {
+            showPostsHandler(posts)
+        }
+        
+    }
+}
+
+class PostsPresenterInterfaceMock: PostsPresenterInterface {
+    init() { }
+
+
+    private(set) var viewDidLoadCallCount = 0
+    var viewDidLoadHandler: (() -> ())?
+    func viewDidLoad()  {
+        viewDidLoadCallCount += 1
+        if let viewDidLoadHandler = viewDidLoadHandler {
+            viewDidLoadHandler()
+        }
+        
+    }
+}
+
 class AuthenticationPresenterInterfaceMock: AuthenticationPresenterInterface {
     init() { }
 
@@ -38,6 +99,33 @@ class AuthenticationPresenterInterfaceMock: AuthenticationPresenterInterface {
         didTapLoginArgValues.append(username)
         if let didTapLoginHandler = didTapLoginHandler {
             didTapLoginHandler(username)
+        }
+        
+    }
+}
+
+class PostsRoutingMock: PostsRouting {
+    init() { }
+
+
+    private(set) var showCommentsCallCount = 0
+    var showCommentsArgValues = [Post]()
+    var showCommentsHandler: ((Post) -> ())?
+    func showComments(for post: Post)  {
+        showCommentsCallCount += 1
+        showCommentsArgValues.append(post)
+        if let showCommentsHandler = showCommentsHandler {
+            showCommentsHandler(post)
+        }
+        
+    }
+
+    private(set) var showPostsCallCount = 0
+    var showPostsHandler: (() -> ())?
+    func showPosts()  {
+        showPostsCallCount += 1
+        if let showPostsHandler = showPostsHandler {
+            showPostsHandler()
         }
         
     }

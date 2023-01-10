@@ -10,7 +10,7 @@ import Combine
 
 struct Mocks {
     static let user = User(
-        id: 0,
+        id: 1,
         name: "Bret",
         username: "Bret",
         email: "Bret@email.com",
@@ -25,6 +25,32 @@ struct Mocks {
     static func loginFailure(_:String) -> AnyPublisher<User, AuthenticationError> {
         let subject = PassthroughSubject<User, AuthenticationError>()
         subject.send(completion: .failure(.userNotFound))
+        return subject.eraseToAnyPublisher()
+    }
+
+    static var posts: Posts = [
+        Post(
+            userId: 1,
+            id: 1,
+            title: "Lorem ipsum",
+            body: "Lorem ipsum"
+        ),
+        Post(
+            userId: 1,
+            id: 2,
+            title: "Lorem ipsum",
+            body: "Lorem ipsum"
+        )
+    ]
+
+    static func postsSuccess(_:Int) -> AnyPublisher<Posts, NetworkError> {
+        let subject = CurrentValueSubject<Posts, NetworkError>(posts)
+        return subject.eraseToAnyPublisher()
+    }
+
+    static func postsFailure(_:Int) -> AnyPublisher<Posts, NetworkError> {
+        let subject = PassthroughSubject<Posts, NetworkError>()
+        subject.send(completion: .failure(.notFound))
         return subject.eraseToAnyPublisher()
     }
 }

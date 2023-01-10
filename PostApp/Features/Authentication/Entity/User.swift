@@ -7,6 +7,8 @@
 
 import Foundation
 
+typealias Users = [User]
+
 struct User: Decodable {
     let id: Int
     let name: String

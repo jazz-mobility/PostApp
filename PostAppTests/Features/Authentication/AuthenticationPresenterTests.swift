@@ -36,8 +36,10 @@ final class AuthenticationPresenterTests: XCTestCase {
         sut.didTapLogin(username: "Bret")
         // Then
         XCTAssertEqual(interactor.loginCallCount, 1)
-        XCTAssertEqual(router.didFinishAuthenticationCallCount, 1)
-        XCTAssertEqual(router.didFinishAuthenticationArgValues.first, Mocks.user)
+        wait {
+            XCTAssertEqual(self.router.didFinishAuthenticationCallCount, 1)
+            XCTAssertEqual(self.router.didFinishAuthenticationArgValues.first, Mocks.user)
+        }
     }
 
     func testLoginFailure() {
@@ -46,7 +48,9 @@ final class AuthenticationPresenterTests: XCTestCase {
         // When
         sut.didTapLogin(username: "Bret")
         // Then
-        XCTAssertEqual(interactor.loginCallCount, 1)
-        XCTAssertEqual(view.showCallCount, 1)
+        wait {
+            XCTAssertEqual(self.interactor.loginCallCount, 1)
+            XCTAssertEqual(self.view.showCallCount, 1)
+        }
     }
 }

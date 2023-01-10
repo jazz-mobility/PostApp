@@ -38,9 +38,7 @@ final class AuthenticationViewController: UIViewController {
 
 extension AuthenticationViewController: AuthenticationViewInterface {
     func show(error: String) {
-        let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Ok", style: .destructive))
-        present(alertController, animated: true)
+        showAlert(text: error)
     }
 }
 

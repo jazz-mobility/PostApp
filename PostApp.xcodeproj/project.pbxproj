@@ -29,6 +29,17 @@
 		E1B99DE7296CADC800B6A133 /* AuthenticationPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B99DE6296CADC800B6A133 /* AuthenticationPresenterTests.swift */; };
 		E1B99DEB296CAED000B6A133 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B99DEA296CAED000B6A133 /* GeneratedMocks.swift */; };
 		E1B99DF2296CB54E00B6A133 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B99DF1296CB54E00B6A133 /* Mocks.swift */; };
+		E1B99DF6296CC0EA00B6A133 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B99DF5296CC0EA00B6A133 /* PostsViewController.swift */; };
+		E1B99DF9296CCFD800B6A133 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B99DF8296CCFD800B6A133 /* Posts.swift */; };
+		E1B99DFC296CD27200B6A133 /* PostsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B99DFB296CD27200B6A133 /* PostsPresenter.swift */; };
+		E1B99E00296CD2BC00B6A133 /* PostsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B99DFF296CD2BC00B6A133 /* PostsInteractor.swift */; };
+		E1B99E03296CD31C00B6A133 /* PostsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B99E02296CD31C00B6A133 /* PostsRouter.swift */; };
+		E1B99E05296CD38B00B6A133 /* PostsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B99E04296CD38B00B6A133 /* PostsFactory.swift */; };
+		E1B99E08296CD66000B6A133 /* GetPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B99E07296CD66000B6A133 /* GetPosts.swift */; };
+		E1B99E0B296CDB0500B6A133 /* UIViewController+ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B99E0A296CDB0500B6A133 /* UIViewController+ErrorAlert.swift */; };
+		E1B99E0D296CDEED00B6A133 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B99E0C296CDEED00B6A133 /* PostTableViewCell.swift */; };
+		E1B99E11296D020E00B6A133 /* PostsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B99E10296D020E00B6A133 /* PostsPresenterTests.swift */; };
+		E1B99E14296D0A6600B6A133 /* XCTestCase+Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B99E13296D0A6600B6A133 /* XCTestCase+Wait.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +86,17 @@
 		E1B99DE6296CADC800B6A133 /* AuthenticationPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPresenterTests.swift; sourceTree = "<group>"; };
 		E1B99DEA296CAED000B6A133 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		E1B99DF1296CB54E00B6A133 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		E1B99DF5296CC0EA00B6A133 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		E1B99DF8296CCFD800B6A133 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		E1B99DFB296CD27200B6A133 /* PostsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsPresenter.swift; sourceTree = "<group>"; };
+		E1B99DFF296CD2BC00B6A133 /* PostsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsInteractor.swift; sourceTree = "<group>"; };
+		E1B99E02296CD31C00B6A133 /* PostsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRouter.swift; sourceTree = "<group>"; };
+		E1B99E04296CD38B00B6A133 /* PostsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsFactory.swift; sourceTree = "<group>"; };
+		E1B99E07296CD66000B6A133 /* GetPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPosts.swift; sourceTree = "<group>"; };
+		E1B99E0A296CDB0500B6A133 /* UIViewController+ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ErrorAlert.swift"; sourceTree = "<group>"; };
+		E1B99E0C296CDEED00B6A133 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		E1B99E10296D020E00B6A133 /* PostsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsPresenterTests.swift; sourceTree = "<group>"; };
+		E1B99E13296D0A6600B6A133 /* XCTestCase+Wait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Wait.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +147,7 @@
 		E18E643A2966457000563D54 /* PostApp */ = {
 			isa = PBXGroup;
 			children = (
+				E1B99E09296CDAF100B6A133 /* Extensions */,
 				E18E648C296B6E3E00563D54 /* Dependencies */,
 				E18E647B296B621B00563D54 /* Services */,
 				E18E6470296B56B300563D54 /* Features */,
@@ -140,6 +163,7 @@
 		E18E64512966457100563D54 /* PostAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				E1B99E12296D0A5400B6A133 /* Extensions */,
 				E1B99DE9296CAE3D00B6A133 /* Generated */,
 				E1B99DE5296CAD9C00B6A133 /* Features */,
 				E18E64522966457100563D54 /* PostAppTests.swift */,
@@ -173,6 +197,7 @@
 		E18E6470296B56B300563D54 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				E1B99DF3296CC0B600B6A133 /* Posts */,
 				E18E646F296B56AB00563D54 /* Authentication */,
 			);
 			path = Features;
@@ -256,6 +281,7 @@
 		E1B99DE5296CAD9C00B6A133 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				E1B99E0F296CFF4900B6A133 /* Posts */,
 				E1B99DE8296CADCD00B6A133 /* Authentication */,
 			);
 			path = Features;
@@ -276,6 +302,93 @@
 				E1B99DF1296CB54E00B6A133 /* Mocks.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		E1B99DF3296CC0B600B6A133 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				E1B99E06296CD64D00B6A133 /* EndPoint */,
+				E1B99E01296CD30A00B6A133 /* Router */,
+				E1B99DFE296CD2AB00B6A133 /* Interactor */,
+				E1B99DFA296CD25000B6A133 /* Presenter */,
+				E1B99DF7296CCFCF00B6A133 /* Entity */,
+				E1B99DF4296CC0C200B6A133 /* View */,
+				E1B99E04296CD38B00B6A133 /* PostsFactory.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		E1B99DF4296CC0C200B6A133 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E1B99DF5296CC0EA00B6A133 /* PostsViewController.swift */,
+				E1B99E0C296CDEED00B6A133 /* PostTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E1B99DF7296CCFCF00B6A133 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E1B99DF8296CCFD800B6A133 /* Posts.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		E1B99DFA296CD25000B6A133 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E1B99DFB296CD27200B6A133 /* PostsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E1B99DFE296CD2AB00B6A133 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E1B99DFF296CD2BC00B6A133 /* PostsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E1B99E01296CD30A00B6A133 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E1B99E02296CD31C00B6A133 /* PostsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E1B99E06296CD64D00B6A133 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				E1B99E07296CD66000B6A133 /* GetPosts.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		E1B99E09296CDAF100B6A133 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1B99E0A296CDB0500B6A133 /* UIViewController+ErrorAlert.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E1B99E0F296CFF4900B6A133 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				E1B99E10296D020E00B6A133 /* PostsPresenterTests.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		E1B99E12296D0A5400B6A133 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1B99E13296D0A6600B6A133 /* XCTestCase+Wait.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,20 +521,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B99DFC296CD27200B6A133 /* PostsPresenter.swift in Sources */,
 				E18E647A296B588700563D54 /* AuthenticationInteractor.swift in Sources */,
+				E1B99E05296CD38B00B6A133 /* PostsFactory.swift in Sources */,
 				E1B99DE4296CAA8000B6A133 /* AuthenticationFactory.swift in Sources */,
 				E18E64402966457000563D54 /* AuthenticationViewController.swift in Sources */,
+				E1B99E03296CD31C00B6A133 /* PostsRouter.swift in Sources */,
 				E18E648B296B6D7C00563D54 /* AuthenticationRouter.swift in Sources */,
 				E18E648E296B6E4B00563D54 /* Dependencies.swift in Sources */,
+				E1B99E00296CD2BC00B6A133 /* PostsInteractor.swift in Sources */,
 				E18E6480296B627A00563D54 /* Request.swift in Sources */,
 				E18E6485296B6C1800563D54 /* GetUser.swift in Sources */,
 				E18E643C2966457000563D54 /* AppDelegate.swift in Sources */,
 				E18E6476296B582800563D54 /* AuthenticationPresenter.swift in Sources */,
+				E1B99DF6296CC0EA00B6A133 /* PostsViewController.swift in Sources */,
+				E1B99E0D296CDEED00B6A133 /* PostTableViewCell.swift in Sources */,
 				E18E6473296B56D900563D54 /* AuthenticationView.swift in Sources */,
+				E1B99E0B296CDB0500B6A133 /* UIViewController+ErrorAlert.swift in Sources */,
 				E18E6482296B671600563D54 /* NetworkError.swift in Sources */,
 				E18E643E2966457000563D54 /* SceneDelegate.swift in Sources */,
 				E18E647E296B623000563D54 /* NetworkService.swift in Sources */,
+				E1B99E08296CD66000B6A133 /* GetPosts.swift in Sources */,
 				E18E6488296B6C4A00563D54 /* User.swift in Sources */,
+				E1B99DF9296CCFD800B6A133 /* Posts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,10 +551,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B99E11296D020E00B6A133 /* PostsPresenterTests.swift in Sources */,
 				E1B99DE7296CADC800B6A133 /* AuthenticationPresenterTests.swift in Sources */,
 				E18E64532966457100563D54 /* PostAppTests.swift in Sources */,
 				E1B99DF2296CB54E00B6A133 /* Mocks.swift in Sources */,
 				E1B99DEB296CAED000B6A133 /* GeneratedMocks.swift in Sources */,
+				E1B99E14296D0A6600B6A133 /* XCTestCase+Wait.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
