@@ -7,13 +7,24 @@
 
 import Foundation
 
-struct Post: Decodable {
+struct Post: Codable {
     let userId: Int
     let id: Int
     let title: String
     let body: String
 }
 
-extension Post: Hashable {}
+extension Post: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+        hasher.combine(userId)
+    }
+}
+
+extension Post: Equatable {
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        lhs.id == rhs.id && lhs.userId == rhs.userId
+    }
+}
 
 typealias Posts = [Post]

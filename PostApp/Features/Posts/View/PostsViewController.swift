@@ -31,10 +31,15 @@ final class PostsViewController: UIViewController {
     }
 
     private lazy var datasource: PostsTableDataSource = {
-        let datasource = PostsTableDataSource(tableView: tableView) { tableView, indexPath, post in
+        let datasource = PostsTableDataSource(tableView: tableView) { [weak self] tableView, indexPath, post in
             let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.reuseIdentifier, for: indexPath)
-            if let cell = cell as? PostTableViewCell {
-                cell.configure(post: post, isFavorite: true)
+            if let cell = cell as? PostTableViewCell, let `self` = self {
+                cell.configure(
+                    post: post,
+                    isFavorite: self.presenter.isFavorite(post)
+                ) {
+                    self.presenter.didTapFavorite(post)
+                }
             }
             return cell
         }

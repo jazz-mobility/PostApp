@@ -40,6 +40,7 @@
 		E1B99E0D296CDEED00B6A133 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B99E0C296CDEED00B6A133 /* PostTableViewCell.swift */; };
 		E1B99E11296D020E00B6A133 /* PostsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B99E10296D020E00B6A133 /* PostsPresenterTests.swift */; };
 		E1B99E14296D0A6600B6A133 /* XCTestCase+Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B99E13296D0A6600B6A133 /* XCTestCase+Wait.swift */; };
+		E1B99E16296D0BE100B6A133 /* UserDefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B99E15296D0BE100B6A133 /* UserDefaultStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		E1B99E0C296CDEED00B6A133 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		E1B99E10296D020E00B6A133 /* PostsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsPresenterTests.swift; sourceTree = "<group>"; };
 		E1B99E13296D0A6600B6A133 /* XCTestCase+Wait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Wait.swift"; sourceTree = "<group>"; };
+		E1B99E15296D0BE100B6A133 /* UserDefaultStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 		E18E647B296B621B00563D54 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E1C62D2A296E00EF00A68E7F /* Storage */,
 				E18E647C296B622200563D54 /* NetworkService */,
 			);
 			path = Services;
@@ -391,6 +394,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		E1C62D2A296E00EF00A68E7F /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				E1B99E15296D0BE100B6A133 /* UserDefaultStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -541,6 +552,7 @@
 				E18E6482296B671600563D54 /* NetworkError.swift in Sources */,
 				E18E643E2966457000563D54 /* SceneDelegate.swift in Sources */,
 				E18E647E296B623000563D54 /* NetworkService.swift in Sources */,
+				E1B99E16296D0BE100B6A133 /* UserDefaultStorage.swift in Sources */,
 				E1B99E08296CD66000B6A133 /* GetPosts.swift in Sources */,
 				E18E6488296B6C4A00563D54 /* User.swift in Sources */,
 				E1B99DF9296CCFD800B6A133 /* Posts.swift in Sources */,

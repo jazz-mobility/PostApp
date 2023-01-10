@@ -72,21 +72,6 @@ class PostsViewInterfaceMock: PostsViewInterface {
     }
 }
 
-class PostsPresenterInterfaceMock: PostsPresenterInterface {
-    init() { }
-
-
-    private(set) var viewDidLoadCallCount = 0
-    var viewDidLoadHandler: (() -> ())?
-    func viewDidLoad()  {
-        viewDidLoadCallCount += 1
-        if let viewDidLoadHandler = viewDidLoadHandler {
-            viewDidLoadHandler()
-        }
-        
-    }
-}
-
 class AuthenticationPresenterInterfaceMock: AuthenticationPresenterInterface {
     init() { }
 
@@ -153,6 +138,45 @@ class AuthenticationRoutingMock: AuthenticationRouting {
         authenticateUserCallCount += 1
         if let authenticateUserHandler = authenticateUserHandler {
             authenticateUserHandler()
+        }
+        
+    }
+}
+
+class PostsPresenterInterfaceMock: PostsPresenterInterface {
+    init() { }
+
+
+    private(set) var didTapFavoriteCallCount = 0
+    var didTapFavoriteArgValues = [Post]()
+    var didTapFavoriteHandler: ((Post) -> ())?
+    func didTapFavorite(_ post: Post)  {
+        didTapFavoriteCallCount += 1
+        didTapFavoriteArgValues.append(post)
+        if let didTapFavoriteHandler = didTapFavoriteHandler {
+            didTapFavoriteHandler(post)
+        }
+        
+    }
+
+    private(set) var isFavoriteCallCount = 0
+    var isFavoriteArgValues = [Post]()
+    var isFavoriteHandler: ((Post) -> (Bool))?
+    func isFavorite(_ post: Post) -> Bool {
+        isFavoriteCallCount += 1
+        isFavoriteArgValues.append(post)
+        if let isFavoriteHandler = isFavoriteHandler {
+            return isFavoriteHandler(post)
+        }
+        return false
+    }
+
+    private(set) var viewDidLoadCallCount = 0
+    var viewDidLoadHandler: (() -> ())?
+    func viewDidLoad()  {
+        viewDidLoadCallCount += 1
+        if let viewDidLoadHandler = viewDidLoadHandler {
+            viewDidLoadHandler()
         }
         
     }

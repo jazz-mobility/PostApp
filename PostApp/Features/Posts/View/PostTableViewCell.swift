@@ -25,7 +25,13 @@ class PostTableViewCell: UITableViewCell {
 
     private lazy var favoriteButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "heart"), for: .normal)
+        button.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        button.addAction(UIAction(handler: { _ in
+            var isFavorite = button.tintColor == .systemRed
+            isFavorite.toggle()
+            button.tintColor = isFavorite ? .systemRed : .lightGray
+            self.favoriteHandler?()
+        }), for: .touchUpInside)
         return button
     }()
 
@@ -66,9 +72,12 @@ class PostTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func configure(post: Post, isFavorite: Bool) {
+    private var favoriteHandler: (() -> Void)?
+
+    func configure(post: Post, isFavorite: Bool, favoriteHandler: @escaping () -> Void) {
         titleLabel.text = post.title
         subtitleLabel.text = post.body
         favoriteButton.tintColor = isFavorite ? .systemRed : .lightGray
+        self.favoriteHandler = favoriteHandler
     }
 }

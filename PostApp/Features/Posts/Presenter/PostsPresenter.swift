@@ -8,8 +8,13 @@
 import Foundation
 import Combine
 
+protocol FavoritesManager: AnyObject {
+    func didTapFavorite(_ post: Post)
+    func isFavorite(_ post: Post) -> Bool
+}
+
 /// @mockable
-protocol PostsPresenterInterface: AnyObject {
+protocol PostsPresenterInterface: FavoritesManager {
     func viewDidLoad()
 }
 
@@ -19,6 +24,9 @@ final class PostsPresenter {
     private let interactor: PostsInteractorInterface
     private let router: PostsRoutingDelegate
     private let user: User
+
+    @UserDefaultStorage(key: "favorites", default: [])
+    private var favorites: [Post]
 
     init(
         interactor: PostsInteractorInterface,
@@ -46,4 +54,17 @@ extension PostsPresenter: PostsPresenterInterface {
             }
             .store(in: &cancellableSet)
     }
+
+    func didTapFavorite(_ post: Post) {
+        print("Favorites before editing - \(favorites)")
+        if favorites.contains(post)
+        {
+            favorites.removeAll { $0 == post }
+        } else {
+            favorites.append(post)
+        }
+        print("Favorites after editing - \(favorites)")
+    }
+
+    func isFavorite(_ post: Post) -> Bool { favorites.contains(post) }
 }
